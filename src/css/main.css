@@ -1,4 +1,6 @@
 @charset "UTF-8";
+/* 页面样式
+   ========================================================================== */
 /* resetcss
    ========================================================================== */
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
@@ -407,6 +409,25 @@ textarea {
   /* 2 */
 }
 
+html {
+  font-size: 62.5%;
+  color: #222;
+}
+
+::selection {
+  background-color: #b3d4fc;
+  text-shadow: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
 /* 工具样式
    ========================================================================== */
 .center-block {
@@ -466,23 +487,68 @@ textarea {
   clear: both;
 }
 
-html {
-  font-size: 62.5%;
-  color: #222;
-}
-
-::selection {
-  background-color: #b3d4fc;
-  text-shadow: none;
-}
-
-ul {
+/* 浏览器更新提示
+   ========================================================================== */
+.browserupgrade {
   margin: 0;
-  padding: 0;
+  padding: 1rem;
+  background: #ccc;
 }
 
-li {
-  list-style: none;
+/* 自定义页面样式
+   ========================================================================== */
+body {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  background-color: #f7f7f7;
+}
+
+a {
+  color: #666;
+  text-decoration: none;
+}
+a:hover, a:active {
+  color: #0ae;
+  text-decoration: underline;
+}
+
+/* 网站头部
+   ========================================================================== */
+header {
+  width: 100%;
+}
+header .top {
+  line-height: 3rem;
+  padding: 0 1.5rem;
+  color: #fff;
+  background: #555;
+  border-bottom: 1px solid #ecc000;
+}
+header .top .tel {
+  float: left;
+}
+header .top ul {
+  font-size: 0;
+  text-align: right;
+}
+header .top ul li {
+  display: inline-block;
+  font-size: 1.2rem;
+}
+header .top ul li a {
+  color: #fff;
+}
+
+/* 网站主要内容
+   ========================================================================== */
+.container {
+  width: 100%;
+}
+
+/* 底部导航
+   ========================================================================== */
+footer {
+  width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */
