@@ -413,6 +413,41 @@ header {
     }
 }
 
+// 底部导航
+.footer {
+    padding: 3rem 0;
+    background-color: #fff;
+    border-top: 2px solid #eee;
+}
+.footer-content {
+    width: 90%;
+    margin: 0 auto;
+
+    .brand {
+        float: left;
+        display: block;
+        filter: grayscale(100%);
+        width: 20%;
+        height: 35px;
+        background: url(../img/logo@1x.png) left no-repeat;
+        background-size: 150px 35px;
+    }
+
+    ul {
+        float: left;
+        width: 15%;
+    
+        .title {
+            font-size: 1.6rem;
+            line-height: 3rem;
+        }
+
+        li {
+            font-size: 1.4rem;
+            line-height: 2.4rem;
+        }
+    }
+}
 
 
 
