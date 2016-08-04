@@ -1,6 +1,8 @@
 @charset "UTF-8";
 /* 页面样式
    ========================================================================== */
+/* mixin
+   ========================================================================== */
 /* resetcss
    ========================================================================== */
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
@@ -574,6 +576,49 @@ header .main ul li a:hover, header .main ul li a:active {
   background: #f8f6f1;
 }
 
+@media (max-width: 50.0525em) {
+  header .top ul li a {
+    padding: 0 1rem;
+  }
+}
+@media (max-width: 30.0525em) {
+  header .top .tel,
+  header .top ul li:nth-child(3),
+  header .top ul li:nth-child(4) {
+    display: none;
+  }
+}
+@media (max-width: 50.0525em) {
+  header .main .brand {
+    float: none;
+    display: block;
+    padding: 0;
+    margin: 1.5rem auto 0.5rem;
+    text-align: center;
+  }
+
+  header .main ul {
+    text-align: center;
+  }
+  header .main ul li {
+    border: none;
+  }
+  header .main ul li a {
+    padding: 0 1.5rem;
+  }
+}
+@media (max-width: 30.0525em) {
+  header .main ul li {
+    line-height: 3rem;
+  }
+  header .main ul li a {
+    font-weight: normal;
+    padding: 0 0.5rem;
+  }
+  header .main ul li:first-child {
+    display: none;
+  }
+}
 /* 网站主要内容
    ========================================================================== */
 .container {

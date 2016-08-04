@@ -4,7 +4,19 @@
 
 
 
+/* mixin
+   ========================================================================== */
+@import "_mq.scss";
 
+// Configuration
+$mq-responsive: true;
+$mq-static-breakpoint: desktop;
+$mq-breakpoints: (
+  mobile:  481px,
+  tablet:  740px,
+  desktop: 801px,
+  wide:    1300px
+);
 
 
 /* resetcss
@@ -91,7 +103,6 @@ header {
 
             li {
                 display: inline-block;
-                // background: red;
                 font-size: 1.2rem;
                 vertical-align: top;
 
@@ -99,6 +110,7 @@ header {
                     color: #fff;
                     display: inline-block;
                     padding: 0 1.5rem;
+
                 }
             }
 
@@ -147,15 +159,59 @@ header {
 }
 
 
-@media only screen and (max-width: 50em) {
-
+// 800px-480px下顶部导航
+ @include mq($until:desktop) {
+    header .top ul li a {
+        padding: 0 1rem;
+    }
 }
-@media only screen and (min-width: 30.0625em) and (max-width: 50em) {
-
+@include mq($until:mobile) {
+    header .top .tel,
+    header .top ul li:nth-child(3),
+    header .top ul li:nth-child(4) {
+        display: none;
+    }
 }
-@media only screen and (max-width: 30em) {
 
+
+
+// 800px下主体导航
+@include mq($until:desktop) {
+    header .main .brand {
+        float: none;
+        display: block;
+        padding: 0;
+        margin: 1.5rem auto 0.5rem;
+        text-align: center;
+    }
+    header .main ul {
+        text-align: center;
+
+        li {
+            border: none;
+
+            a {
+                padding: 0 1.5rem;
+            }
+        }
+    }
 }
+@include mq($until:mobile) {
+    header .main ul{
+         li {
+            line-height: 3rem;
+            a {
+                font-weight: normal;
+                padding: 0 0.5rem;
+            }
+         }
+         li:first-child {
+            display: none;
+        }
+    }
+}
+
+
 
 
 
@@ -163,10 +219,9 @@ header {
    ========================================================================== */
 .container {
     width: 100%;
-
-
-
 }
+
+
 /* 交易信息 */
 .transaction {
     width: 100%;
@@ -210,6 +265,14 @@ header {
         color: #fff;
     }
 }
+
+@include mq($until:desktop) {
+
+}
+
+
+
+
 
 // 广告
 .ad {
@@ -414,7 +477,7 @@ header {
                         background-color: #ffc468;
                     }
                 }
-                .disabled {                    
+                .disabled {
                     background-color: #ccc !important;
                     cursor: not-allowed;
                 }
@@ -449,7 +512,7 @@ header {
     ul {
         float: left;
         width: 15%;
-    
+
         .title {
             font-size: 1.6rem;
             line-height: 3rem;
