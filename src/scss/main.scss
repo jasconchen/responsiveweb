@@ -267,9 +267,71 @@ header {
 }
 
 @include mq($until:desktop) {
+    .trans-data,
+    .trans-report {
+        text-align: center;
+        padding: 0;
+    }
 
+    .trans-data {
+        span {
+            padding: 1rem 0.5rem;
+            font-size: 1.2rem;
+        }
+        .trans-money {
+            font-size: 1.6rem;
+            margin: 0;
+            padding: 1rem 0.5rem;
+            letter-spacing: inherit;
+            background: transparent;
+            box-shadow: inherit;
+        }
+    }
+    .trans-report {
+        a {
+            padding: 1rem 0.5rem;
+            font-size: 1.2rem;
+        }
+    }
 }
 
+@include mq($until:mobile) {
+    .transaction {
+        padding: 0.5rem 0;
+    }
+    .trans-data,
+    .trans-report {
+        float: none;
+        text-align: center;
+        padding: 0;
+    }
+
+    .trans-data {
+        span {
+            padding: 0;
+            font-size: 1.2rem;
+        }
+        .trans-money {
+            font-size: 1.6rem;
+            margin: 0;
+            padding: 0 6px;
+            letter-spacing: inherit;
+            background: transparent;
+            box-shadow: inherit;
+        }
+    }
+    .trans-report {
+        a {
+            padding: 0;
+            font-size: 1.2rem;
+        }
+    }
+}
+@include mq($from:mobile, $until:desktop) {
+    .transaction {
+        padding: 0;
+    }
+}
 
 
 
@@ -319,6 +381,45 @@ header {
 
 }
 
+@include mq($from:mobile,$until:desktop) {
+    .feature {
+        .item {
+            text-align: center;
+            h3 {
+                display: block;
+                text-align: center;
+                width: 100%;
+                font-size: 2.6rem;
+            }
+            p {
+                font-size: 1.2rem;
+                width: 100%;
+            }
+        }
+    }
+}
+@include mq($until:mobile) {
+    .feature {
+        width: 96%;
+        margin: 1rem auto;
+        .item {
+            display: block;
+            width: auto;
+        }
+        .item + .item {
+            margin: 1rem 0 0;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
 // 最新公告
 .notice {
     width: 90%;
@@ -359,6 +460,26 @@ header {
         color: #ff9900;
     }
 }
+@include mq($until:mobile) {
+    .notice {
+        width: 96%;
+        margin: 1rem auto;
+        font-size: 1.2rem;
+
+        a {
+            margin-left: 1rem;
+
+            span {
+                display: none;
+            }
+        }
+    }
+}
+
+
+
+
+
 
 
 // 产品列表
@@ -488,6 +609,103 @@ header {
         }
     }
 }
+
+@include mq($until:desktop) {
+    .product {
+        h2 {
+            float: none;
+            width: 100%;
+            margin-top: 2rem;
+            font-size: 2.2rem;
+
+            em {
+                display: inline;
+                font-size: 1.2rem;
+                padding-left: 12px;
+            }
+        }
+
+        .product-content {
+            float: none;
+            width: 100%;
+            border-left: none;
+
+            .item {
+                h3 {
+                    margin-bottom: 0;
+
+                    em {
+                        font-size: 2.4rem;
+                    }
+                }
+
+                .info {
+                    padding: 1rem 1rem 0;
+                    font-size: 1.2rem;
+
+                    p span {
+                        font-size: 2rem;
+                    }
+                }
+
+                .buy a{
+                    margin: .5rem auto;
+                }
+            }
+        }
+    }
+}
+
+@include mq($until:mobile) {
+    .product {
+        width: 96%;
+
+        h2 {
+            em:first-child:before {
+                content: ' ';
+                display: table;
+            }
+        }
+
+        .product-content {
+            .item {
+                h3 em {
+                    font-size: 2rem;
+                    margin-right: 0;
+                }
+
+                .info {
+                    float: right;
+                    width: 70%;
+                    padding: 1rem 0;
+                    border: none;
+
+                    p span {
+                        font-size: 1.8rem;
+                    }
+                }
+
+                .buy {
+                    clear: both;
+                    float: none;
+                    width: 100%;
+                    padding: 1rem 0 2rem;
+                    a {
+                        margin-top: 0;
+                        max-width: 26rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
 
 // 底部导航
 .footer {

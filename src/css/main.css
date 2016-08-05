@@ -671,6 +671,66 @@ header .main ul li a:hover, header .main ul li a:active {
   color: #fff;
 }
 
+@media (max-width: 50.0525em) {
+  .trans-data,
+  .trans-report {
+    text-align: center;
+    padding: 0;
+  }
+
+  .trans-data span {
+    padding: 1rem 0.5rem;
+    font-size: 1.2rem;
+  }
+  .trans-data .trans-money {
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 1rem 0.5rem;
+    letter-spacing: inherit;
+    background: transparent;
+    box-shadow: inherit;
+  }
+
+  .trans-report a {
+    padding: 1rem 0.5rem;
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 30.0525em) {
+  .transaction {
+    padding: 0.5rem 0;
+  }
+
+  .trans-data,
+  .trans-report {
+    float: none;
+    text-align: center;
+    padding: 0;
+  }
+
+  .trans-data span {
+    padding: 0;
+    font-size: 1.2rem;
+  }
+  .trans-data .trans-money {
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 0 6px;
+    letter-spacing: inherit;
+    background: transparent;
+    box-shadow: inherit;
+  }
+
+  .trans-report a {
+    padding: 0;
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 30.0625em) and (max-width: 50.0525em) {
+  .transaction {
+    padding: 0;
+  }
+}
 .ad {
   display: none;
 }
@@ -709,6 +769,34 @@ header .main ul li a:hover, header .main ul li a:active {
   margin-left: 1.5rem;
 }
 
+@media (min-width: 30.0625em) and (max-width: 50.0525em) {
+  .feature .item {
+    text-align: center;
+  }
+  .feature .item h3 {
+    display: block;
+    text-align: center;
+    width: 100%;
+    font-size: 2.6rem;
+  }
+  .feature .item p {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+}
+@media (max-width: 30.0525em) {
+  .feature {
+    width: 96%;
+    margin: 1rem auto;
+  }
+  .feature .item {
+    display: block;
+    width: auto;
+  }
+  .feature .item + .item {
+    margin: 1rem 0 0;
+  }
+}
 .notice {
   width: 90%;
   margin: 2rem auto;
@@ -745,6 +833,19 @@ header .main ul li a:hover, header .main ul li a:active {
   color: #ff9900;
 }
 
+@media (max-width: 30.0525em) {
+  .notice {
+    width: 96%;
+    margin: 1rem auto;
+    font-size: 1.2rem;
+  }
+  .notice a {
+    margin-left: 1rem;
+  }
+  .notice a span {
+    display: none;
+  }
+}
 .product {
   width: 90%;
   margin: 2rem auto;
@@ -854,6 +955,72 @@ header .main ul li a:hover, header .main ul li a:active {
   border-top: 1px solid #eee;
 }
 
+@media (max-width: 50.0525em) {
+  .product h2 {
+    float: none;
+    width: 100%;
+    margin-top: 2rem;
+    font-size: 2.2rem;
+  }
+  .product h2 em {
+    display: inline;
+    font-size: 1.2rem;
+    padding-left: 12px;
+  }
+  .product .product-content {
+    float: none;
+    width: 100%;
+    border-left: none;
+  }
+  .product .product-content .item h3 {
+    margin-bottom: 0;
+  }
+  .product .product-content .item h3 em {
+    font-size: 2.4rem;
+  }
+  .product .product-content .item .info {
+    padding: 1rem 1rem 0;
+    font-size: 1.2rem;
+  }
+  .product .product-content .item .info p span {
+    font-size: 2rem;
+  }
+  .product .product-content .item .buy a {
+    margin: .5rem auto;
+  }
+}
+@media (max-width: 30.0525em) {
+  .product {
+    width: 96%;
+  }
+  .product h2 em:first-child:before {
+    content: ' ';
+    display: table;
+  }
+  .product .product-content .item h3 em {
+    font-size: 2rem;
+    margin-right: 0;
+  }
+  .product .product-content .item .info {
+    float: right;
+    width: 70%;
+    padding: 1rem 0;
+    border: none;
+  }
+  .product .product-content .item .info p span {
+    font-size: 1.8rem;
+  }
+  .product .product-content .item .buy {
+    clear: both;
+    float: none;
+    width: 100%;
+    padding: 1rem 0 2rem;
+  }
+  .product .product-content .item .buy a {
+    margin-top: 0;
+    max-width: 26rem;
+  }
+}
 .footer {
   padding: 3rem 0;
   background-color: #fff;
