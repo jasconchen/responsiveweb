@@ -338,7 +338,7 @@ header {
 
 // 广告
 .ad {
-    display: none;
+    // display: none;
 }
 
 
@@ -742,6 +742,33 @@ header {
         }
     }
 }
+@include mq($until:desktop) {
+    .footer-content {
+        .brand {
+            display: none;
+        }
+        ul {
+            width: 20%;
+
+            .title {
+                font-size: 1.4rem;
+                line-height: 2.5rem;
+            }
+        }
+    }
+}
+@include mq($until:mobile) {
+    .footer-content {
+        width: 98%;
+        ul {
+            li {
+                font-size: 1.2rem;
+                line-height: 2rem;
+            }
+        }
+    }
+}
+
 
 
 
@@ -812,5 +839,70 @@ footer {
     p {
         text-align: center;
         color: #999;
+    }
+}
+
+
+
+/* 打印样式
+   ========================================================================== */
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content:" (" attr(href) ") ";
+    }
+
+    abbr[tltle]:after {
+        content:" (" attr(title) ") ";
+    }
+
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after, {
+        content:'';
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        // width: 100%;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
     }
 }

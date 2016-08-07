@@ -731,10 +731,6 @@ header .main ul li a:hover, header .main ul li a:active {
     padding: 0;
   }
 }
-.ad {
-  display: none;
-}
-
 .feature {
   width: 90%;
   margin: 2rem auto;
@@ -1053,6 +1049,27 @@ header .main ul li a:hover, header .main ul li a:active {
   line-height: 2.4rem;
 }
 
+@media (max-width: 50.0525em) {
+  .footer-content .brand {
+    display: none;
+  }
+  .footer-content ul {
+    width: 20%;
+  }
+  .footer-content ul .title {
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+  }
+}
+@media (max-width: 30.0525em) {
+  .footer-content {
+    width: 98%;
+  }
+  .footer-content ul li {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+}
 /* 底部导航
    ========================================================================== */
 footer {
@@ -1115,6 +1132,64 @@ footer ul li .icon-gs {
 footer p {
   text-align: center;
   color: #999;
+}
+
+/* 打印样式
+   ========================================================================== */
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ") ";
+  }
+
+  abbr[tltle]:after {
+    content: " (" attr(title) ") ";
+  }
+
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: '';
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
