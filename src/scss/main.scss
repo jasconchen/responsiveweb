@@ -720,7 +720,9 @@ header {
     .brand {
         float: left;
         display: block;
+        -webkit-filter: grayscale(100%);
         filter: grayscale(100%);
+        filter: gray;
         width: 20%;
         height: 35px;
         background: url(../img/logo@1x.png) left no-repeat;
